@@ -9,6 +9,8 @@ Note : This only works for networks stored on your computer, it will not "hack" 
 
 Helpful if you forgot your saved wifi passwords / want to login on other devices
 
+Includes : Python script and Bash script that both perform the same task
+
 ## Features
 
 - Lists all saved Wi-Fi profiles on a Windows machine.
@@ -19,8 +21,10 @@ Helpful if you forgot your saved wifi passwords / want to login on other devices
 ## Requirements
 
 - **Operating System**: Windows
-- **Python Version**: Python 3.x
-- **Privileges**: Administrator privileges (required to access Wi-Fi profiles)
+- **One of** :
+   - **Python**: Python 3.x (Recommended)
+   - **Bash Compatible CLI**: Git Bash (Recommended)
+- **Privileges**: Administrator privileges (required to access Wi-Fi profiles, or modify perms to run .sh file for the first time)
 
 ## How It Works
 
@@ -33,8 +37,9 @@ Helpful if you forgot your saved wifi passwords / want to login on other devices
 
 ## Usage
 
+### Python Script :
 1. **Clone or Download the Script**:
-   - Save the script as `wifi_password_finder.py`.
+   - Save the script as whatever you want. For example : `wifi_password_finder.py`.
 
 2. **Run the Script**:
    - Open a Command Prompt or terminal with administrator privileges.
@@ -53,10 +58,32 @@ Helpful if you forgot your saved wifi passwords / want to login on other devices
    Public_WiFi                   | 
    ```
 
+### Bash Script :
+1. **Clone or Download the Script**:
+   - Save the script as whatever you want. For example : `wifi_password_finder.sh`.
+
+2. **Run the Script**:
+   - Open a Bash CLI (Such as Git Bash)
+   - Add execution permissions to the file by running `chmod +x wifi_password_finder.sh` (One time only)
+   - Run the script:
+     ```bash
+     ./wifi_password_finder.sh
+     ```
+
+3. **View the Output**:
+   - The script will display a list of Wi-Fi profiles and their corresponding passwords, if available.
+
+   Example Output:
+   ```
+   Wi-Fi Profile                 | Password
+   ------------------------------|-----------------
+   Home_Network                  | password123
+   Office_WiFi                   | office12345
+   Public_WiFi                   | 
+   ```
+
 ## Notes
 
-- **Encoding Errors**:
-  - If a profile has encoding issues, it will be marked as `ENCODING ERROR` in the output.
 - **Missing Passwords**:
   - If a profile does not have a password stored, the password column will be empty.
 - **Admin Privileges**:
